@@ -37,6 +37,6 @@ data structures in GO into JSON
 ## Dockerfile
 edit Dockerfile
 ## docker build
-`$ docker build -t backen .`
+`$ docker build -t backend .`
 ## docker run
-`$ docker run -it -p 8080:8080 backend`
+`$ docker run -d -it -p 8080:8080 backend`
