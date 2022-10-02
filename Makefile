@@ -2,14 +2,22 @@
 hello:
 	echo "hello"
 
-# make build
-build:
-	docker build -t backen .
-
-# make run
-run:
-	docker run -d -it -p 8080:8080 backend
+# make up
+up:
+	docker compose up -d
 
 # make ps
 ps:
-	docker ps
+	docker compose ps
+
+# make db
+mysql:
+	docker exec -it db bash
+
+# make volume-ls
+volume-ls:
+	docker volume ls
+
+# make volume-rm
+volume-rm:
+	docker volume rm mysql-volume

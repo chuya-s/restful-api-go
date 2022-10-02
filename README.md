@@ -82,6 +82,14 @@ db                  "docker-entrypoint.s…"   db                  running      
 2 rows in set (0.00 sec)
 ```
 
+if remove volume of docker
+
+`$ docker volume rm mysql-volume`
+
+confirm volume
+
+`$ docker volume ls`
+
 # makefile
 ## make run
 rest api with go by docker run 
