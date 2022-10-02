@@ -41,6 +41,47 @@ edit Dockerfile
 ## docker run
 `$ docker run -d -it -p 8080:8080 backend`
 
+## DB
+### mysql
+`$ cd mysql`
+
+`$ docker compose up -d`
+```
+...
+[+] Running 3/3
+ ⠿ Network mysql_default Created 0.0s
+ ⠿ Volume "mysql-volume"  Created 0.0s
+ ⠿ Container db           Started
+```
+`$ docker compose ps`
+```
+NAME                COMMAND                  SERVICE             STATUS              PORTS
+db                  "docker-entrypoint.s…"   db                  running             0.0.0.0:3306->3306/tcp
+```
+`$ docker exec -it db bash`
+
+`bash-4.4# mysql -utest_user -ppassword test_database`
+
+`mysql>show tables;`
+```
++-------------------------+
+| Tables_in_test_database |
++-------------------------+
+| article                 |
++-------------------------+
+1 row in set (0.01 sec)
+```
+`mysql> select * from article;`
+```
++----+---------+------------------+
+| id | title   | content          |
++----+---------+------------------+
+|  1 | 記事1   | 記事1です。      |
+|  2 | 記事2   | 記事2です。      |
++----+---------+------------------+
+2 rows in set (0.00 sec)
+```
+
 # makefile
 ## make run
 rest api with go by docker run 

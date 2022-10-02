@@ -12,7 +12,6 @@ import (
 type Article struct {
 	Id      string `json:"Id"`
 	Title   string `json:"Title"`
-	Desc    string `json:"desc"`
 	Content string `json:"content"`
 }
 
@@ -52,8 +51,8 @@ func handleRequests() {
 
 func main() {
 	Articles = []Article{
-		Article{Id: "1", Title: "Test Title", Desc: "Test Description", Content: "Hello World"},
-		Article{Id: "2", Title: "Test Title2", Desc: "Test Description2", Content: "Hello World2"},
+		Article{Id: "1", Title: "Test Title", Content: "Hello World"},
+		Article{Id: "2", Title: "Test Title2", Content: "Hello World2"},
 	}
 	handleRequests()
 }
