@@ -40,3 +40,10 @@ edit Dockerfile
 `$ docker build -t backend .`
 ## docker run
 `$ docker run -d -it -p 8080:8080 backend`
+
+# makefile
+## make run
+rest api with go by docker run 
+
+## make ps
+docker ps
