@@ -1,4 +1,4 @@
-module example.com/restapigo/mysql
+module github.com/chuya-s/restful-api-go/mysql
 
 go 1.19
 

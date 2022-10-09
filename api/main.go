@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	"example.com/restapigo/model"
+	"github.com/chuya-s/restful-api-go/internal/article"
 	"github.com/gorilla/mux"
 )
 
@@ -24,7 +24,7 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 
 func allArticles(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Endpoint Hit: All Articles Endpoint")
-	articles := model.GetAll()
+	articles := article.GetAll()
 	json.NewEncoder(w).Encode(articles)
 }
 
