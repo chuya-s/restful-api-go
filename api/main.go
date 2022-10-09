@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 
+	"example.com/restapigo/model"
 	"github.com/gorilla/mux"
 )
 
@@ -23,7 +24,8 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 
 func allArticles(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Endpoint Hit: All Articles Endpoint")
-	json.NewEncoder(w).Encode(Articles)
+	articles := model.GetAll()
+	json.NewEncoder(w).Encode(articles)
 }
 
 func postArticle(w http.ResponseWriter, r *http.Request) {
@@ -50,9 +52,7 @@ func handleRequests() {
 }
 
 func main() {
-	Articles = []Article{
-		Article{Id: "1", Title: "Test Title", Content: "Hello World"},
-		Article{Id: "2", Title: "Test Title2", Content: "Hello World2"},
-	}
+	fmt.Println("main start.")
 	handleRequests()
+	fmt.Println("main end.")
 }

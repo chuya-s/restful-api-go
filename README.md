@@ -26,22 +26,44 @@ encodeing/json
 data structures in GO into JSON
 ## Getting Started With A Basic API
 
-# go mod
+# go module/workspace
 ## go mod init
 `$ go mod init example.com/XXX`
+`$ go mod init example.com/YYY`
+
+## go work init
+`$ go work init XXX YYY`
+※ https://future-architect.github.io/articles/20220216a/
 ## go get
+
+
 `$ go get github.com/gorilla/mux`
 
 
 # Docker (Local)
 ## Dockerfile
 edit Dockerfile
-## docker build
-`$ docker build -t backend .`
-## docker run
-`$ docker run -d -it -p 8080:8080 backend`
 
-## DB
+# makefile
+You can launch the local environment with the make command.
+## run Containers(API and DB etc.)
+`$ make up`
+
+## lists Containers
+`$ make ps`
+
+See Makefile for other make commands.
+
+# API
+## call API
+`$ % curl http://localhost:8080/articles`
+```
+[
+    {"Id":"1","Title":"Test Title","content":"Hello World"},
+    {"Id":"2","Title":"Test Title2","content":"Hello World2"}
+]
+```
+# DB
 ### mysql
 `$ cd mysql`
 
@@ -81,18 +103,3 @@ db                  "docker-entrypoint.s…"   db                  running      
 +----+---------+------------------+
 2 rows in set (0.00 sec)
 ```
-
-if remove volume of docker
-
-`$ docker volume rm mysql-volume`
-
-confirm volume
-
-`$ docker volume ls`
-
-# makefile
-## make run
-rest api with go by docker run 
-
-## make ps
-docker ps
