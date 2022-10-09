@@ -1,7 +1,7 @@
-package model
+package article
 
 import (
-	"example.com/restapigo/mysql"
+	"github.com/chuya-s/restful-api-go/mysql"
 )
 
 type Article struct {
