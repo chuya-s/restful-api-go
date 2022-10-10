@@ -3,11 +3,11 @@ hello:
 	echo "hello"
 
 build:
-	docker compose build
+	docker compose build --no-cache=true
 
 # make up
 up: build
-	docker compose up -d
+	docker compose up --detach --force-recreate
 
 # make ps
 ps:

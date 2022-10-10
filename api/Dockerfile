@@ -1,7 +1,6 @@
 FROM golang:1.15
 RUN mkdir /app
-ADD . /app/
-WORKDIR /app
-RUN go mod download
-RUN go build -o main ./...
-CMD ["/app/main"]
+WORKDIR /app/api
+COPY . /app/
+RUN go build -a -o main ./...
+CMD ["/app/api/main"]
