@@ -1,4 +1,4 @@
-module github.com/chuya-s/restful-api-go/mysql
+module github.com/chuya-s/restful-api-go/internal/article
 
 go 1.19
 

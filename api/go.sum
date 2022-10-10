@@ -1,7 +1,11 @@
 github.com/chuya-s/restful-api-go v0.0.0-20221009093952-96d17a31a7fb h1:v04WyM5QvbmyNzVKyfpbkaELIVP86KLHeRoU2wu51g0=
 github.com/chuya-s/restful-api-go v0.0.0-20221009093952-96d17a31a7fb/go.mod h1:Bx3DuePMv7hp/4j2PaRWda4ihRG9vL5SRqLjfEp7zUE=
+github.com/chuya-s/restful-api-go v0.0.0-20221009114920-42ee7926d715 h1:pgh6Es8OEZWTV63KU+lTf2hfpmWzLhVGh+Z6tfVn+Mo=
+github.com/chuya-s/restful-api-go v0.0.0-20221009114920-42ee7926d715/go.mod h1:Bx3DuePMv7hp/4j2PaRWda4ihRG9vL5SRqLjfEp7zUE=
 github.com/chuya-s/restful-api-go/mysql v0.0.0-20221009093952-96d17a31a7fb h1:CWlmdE2uiP6buejt5BugNK9+ZobRmgZnmzsSAdVdJXQ=
 github.com/chuya-s/restful-api-go/mysql v0.0.0-20221009093952-96d17a31a7fb/go.mod h1:rtceg1vAdK0D9GOovQlKmQJejNB79JZ0/+7rpj1JkgE=
+github.com/chuya-s/restful-api-go/mysql v0.0.0-20221009114920-42ee7926d715 h1:K/5itIdeLcDRiKInfese0epOaPsv6UubC24bH4gmce4=
+github.com/chuya-s/restful-api-go/mysql v0.0.0-20221009114920-42ee7926d715/go.mod h1:rtceg1vAdK0D9GOovQlKmQJejNB79JZ0/+7rpj1JkgE=
 github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfCHuOE=
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
