@@ -2,6 +2,8 @@ package article
 
 import (
 	"database/sql"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 type Article struct {
@@ -11,7 +13,7 @@ type Article struct {
 }
 
 func GetAll(db *sql.DB) ([]Article, error) {
-	queried, err := db.Query("select * from article")
+	queried, err := db.Query("select * from article;")
 	if err != nil {
 		return nil, err
 	}
