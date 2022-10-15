@@ -66,7 +66,7 @@ func handleRequests(env *Env) {
 func main() {
 	fmt.Println("main start.")
 
-	db, err := sql.Open("mysql", "test_user:password@tcp(0.0.0.0:3306)/test_database")
+	db, err := sql.Open("mysql", "test_user:password@tcp(db)/test_database")
 	if err != nil {
 		fmt.Println("Db open error:")
 	}

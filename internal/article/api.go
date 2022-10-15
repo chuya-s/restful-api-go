@@ -11,10 +11,11 @@ type Article struct {
 }
 
 func GetAll(db *sql.DB) ([]Article, error) {
-	queried, err := db.Query("select * from article")
+	queried, err := db.Query("select * from article;")
 	if err != nil {
 		return nil, err
 	}
+	defer queried.Close()
 	articles := []Article{}
 	for queried.Next() {
 		article := Article{}
@@ -23,7 +24,6 @@ func GetAll(db *sql.DB) ([]Article, error) {
 			return nil, err
 		}
 		articles = append(articles, article)
-		queried.Close()
 	}
 	return articles, nil
 }
